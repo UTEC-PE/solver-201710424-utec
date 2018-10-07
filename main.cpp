@@ -19,13 +19,19 @@ char* menu() {
       return str;
 }
 
+// Carlos creo que debiste haber empezado implementando funciones simples tipo 5+3, y de ahí continuar agregando otras operaciones
 int main(int argc, char const *argv[]) {
-  char* str;
-  str = (char*) malloc(sizeof(menu()));
-  str = menu();
-  plus_minus(str);
-  cout << str <<'\n';
-  remplazo_variable(str);
-  cout << str <<'\n';
-  return 0;
+    char* str;
+    if (argc == 2) {
+        str = (char*)argv[1];
+    }
+    else {
+      throw "One argument expected";
+    }
+
+    plus_minus(str);
+    cout << str <<'\n';
+    remplazo_variable(str);
+    cout << str <<'\n';
+    return 0;
 }

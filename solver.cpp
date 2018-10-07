@@ -96,6 +96,7 @@ string masmenos(string x){
   return answer;
 };
 
+// Por qué retornar int?
 int transform(char *str){
   std::map<string, int> map{{"+",2},{"-",2},{"*",3},{"/",3},{"^",4}};
   Stack<string> stack;
